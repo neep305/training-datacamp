@@ -22,6 +22,8 @@ print(rename_cols(list(data_with_none)))
 data_with_new_cols = pd.read_csv('./dataset/walmart_prd_details.csv',
                                  sep=',',
                                  skiprows=1,
-                                 names=rename_cols(list(data_with_none)))
+                                 names=rename_cols(list(data_with_none)),
+                                 true_values=["Yes"],
+                                 false_values=["No"])
 
-print(data_with_new_cols)
+print(data_with_new_cols.isna().sum())
