@@ -27,3 +27,4 @@ data_with_new_cols = pd.read_csv('./dataset/walmart_prd_details.csv',
                                  false_values=["No"])
 
 print(data_with_new_cols.isna().sum())
+# print(data_with_new_cols.available)
