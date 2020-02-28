@@ -64,4 +64,19 @@ print(df_subset.tail())
 
 ```
 
-##
+## Exploratory Data Analysis
+### Frequency counts: continent
+> df.continent.value_counts(dropna=False)
+
+```python
+df.continent.value_counts(dropna=False)
+
+df['continent'].value_counts(dropna=False)
+```
+
+### Visualizing single variables with histograms
+
+## Tidying data for analysis
+### Tidy data
+- Formalize the way we describe the shape of data
+
