@@ -80,3 +80,12 @@ df['continent'].value_counts(dropna=False)
 ### Tidy data
 - Formalize the way we describe the shape of data
 
+# Data Manipulation with pandas
+## Transforming data
+### Sorting and subsetting
+
+> isin을 활용한 IN 조건절 구현
+```python
+is_black_or_brown = dogs['color'].isin(['Black','Brown'])
+dogs[is_black_or_brown]
+```
