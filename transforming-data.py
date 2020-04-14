@@ -1,0 +1,20 @@
+import pandas as pd
+
+homelessness = pd.read_pickle('./dataset/homeless_data.pkl')
+
+# print(homelessness.head())
+
+# Subset for rows in South Atlantic or Mid-Atlantic regions
+south_mid_atlantic = homelessness[homelessness["region"].isin(["South Atlantic","Mid-Atlantic"])]
+
+# See the result
+print(south_mid_atlantic)
+
+# The Mojave Desert states
+canu = ["California", "Arizona", "Nevada", "Utah"]
+
+# Filter for rows in the Mojave Desert states
+mojave_homelessness = homelessness[homelessness["state"].isin(canu)]
+
+# See the result
+print(mojave_homelessness)
