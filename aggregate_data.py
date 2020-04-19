@@ -27,3 +27,17 @@ sales_1_1['cum_max_sales'] = sales_1_1['weekly_sales'].cummax()
 
 # See the columns you calculated
 print(sales_1_1[["date", "weekly_sales", "cum_weekly_sales", "cum_max_sales"]])
+
+# Drop duplicate store/type combinations
+store_types = sales.drop_duplicates(subset=["store", "type"])
+print(store_types.head())
+
+# Drop duplicate store/department combinations
+store_depts = sales.drop_duplicates(subset=["store", "department"])
+print(store_depts.head())
+
+# Subset the rows that are holiday weeks and drop duplicate dates
+holiday_dates = sales[sales["is_holiday"] == True].drop_duplicates(subset="date")
+
+# Print date col of holiday_dates
+print(holiday_dates["date"])

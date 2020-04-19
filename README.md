@@ -89,3 +89,19 @@ df['continent'].value_counts(dropna=False)
 is_black_or_brown = dogs['color'].isin(['Black','Brown'])
 dogs[is_black_or_brown]
 ```
+
+## Aggregating data
+```python
+
+```
+
+## 중복데이터 제거
+> 단일 컬럼 기준
+```python
+unique_dogs = vet_visits.drop_duplicates(subset="name")
+```
+
+> 복수 컬럼 기준
+```python
+unique_dogs = vet_visits.drop_duplicates(subset=["name","breed"])
+```
