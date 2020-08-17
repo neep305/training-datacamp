@@ -1,3 +1,31 @@
+# 효율적인 Python 코딩법
+## tuple
+```
+test = (1,) + ('Jason', 'M')
+
+print(test)
+
+# (1, 'Jason', 'M')
+```
+
+## enumerate
+```python
+# Collect all possible pairs using combinations()
+possible_pairs = [*combinations(pokemon_types, 2)]
+
+# Create an empty list called enumerated_tuples
+enumrated_tuples = []
+
+# Add a line to append each enumerated_pair_tuple to the empty list above
+for i,pair in enumerate(possible_pairs, 1):
+    enumerated_pair_tuple = (i,) + pair
+    enumrated_tuples.append(enumerated_pair_tuple)
+
+# Convert all tuples in enumerated_tuples to a list
+enumerated_pairs = [*map(list, enumrated_tuples)]
+print(enumerated_pairs)
+```
+
 # Streamlined Data Ingestion with pandas
 
 ## Importing data from flat files
